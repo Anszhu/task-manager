@@ -1,0 +1,19 @@
+{
+  "name": "team-task-manager-web",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --port 4301",
+    "build": "tsc -p tsconfig.json && vite build",
+    "preview": "vite preview --host 127.0.0.1 --port 4301"
+  },
+  "dependencies": {
+    "preact": "^10.26.5"
+  },
+  "devDependencies": {
+    "@preact/preset-vite": "^2.10.2",
+    "typescript": "^5.8.3",
+    "vite": "^6.3.5"
+  }
+}

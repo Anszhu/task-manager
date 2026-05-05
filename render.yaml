@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: team-task-manager
+    runtime: docker
+    plan: starter
+    dockerfilePath: ./Dockerfile
+    autoDeploy: true
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 4300
+      - key: DB_FILE
+        value: /opt/render/project/src/server/data/team-task-manager.sqlite
+      - key: JWT_SECRET
+        generateValue: true
+    disk:
+      name: team-task-manager-data
+      mountPath: /opt/render/project/src/server/data
+      sizeGB: 1
